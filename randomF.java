@@ -1,5 +1,3 @@
-package randomFunction;
-
 import java.util.Random;
 
 public class randomF {
@@ -7,31 +5,31 @@ public class randomF {
 	public static void main(String[] args)
 	{
 
-		Random rand = new Random(); //random sınıfından nesne oluşturulmuştur.
-        int [] arrayR= new int[9];// 9 tane int sayı alabilen dizi üretilmiştir.
+		Random rand = new Random(); //random sÄ±nÄ±fÄ±ndan nesne oluÅŸturulmuÅŸtur.
+        int [] arrayR= new int[9];// 9 tane int sayÄ± alabilen dizi Ã¼retilmiÅŸtir.
         int num = 0, count=0, sameNum = 0;
 
         for (int i = 0; i < arrayR.length; i++){
-        	sameNum = 0; //her döngü başında sayıların farklılığını sorgulamak için sıfırlanmıştır.
-            num = rand.nextInt(9) + 1; //1 ile 9(dahil) arası random sayı üretilmiştir.
-            for (int j = 0; j < i; j++){//eklenen sayıya kadar olan sayılar taranır, aynı sayı bulunursa sameNum azaltılır ve bir sonraki if'e giriş sağlanır.
+        	sameNum = 0; //her dÃ¶ngÃ¼ baÅŸÄ±nda sayÄ±larÄ±n farklÄ±lÄ±ÄŸÄ±nÄ± sorgulamak iÃ§in sÄ±fÄ±rlanmÄ±ÅŸtÄ±r.
+            num = rand.nextInt(9) + 1; //1 ile 9(dahil) arasÄ± random sayÄ± Ã¼retilmiÅŸtir.
+            for (int j = 0; j < i; j++){//eklenen sayÄ±ya kadar olan sayÄ±lar taranÄ±r, aynÄ± sayÄ± bulunursa sameNum azaltÄ±lÄ±r ve bir sonraki if'e giriÅŸ saÄŸlanÄ±r.
                 if (num == arrayR[j]){
                     sameNum--;                    
                 }
             }
-            if (sameNum <= -1){//dizide aynı sayıya rastlandığında tekrar "aynı indekse" random sayı atamak için for döngüsüne dönülür, random sayı üretme sayısı burada "count" ile sayılmıştır.
+            if (sameNum <= -1){//dizide aynÄ± sayÄ±ya rastlandÄ±ÄŸÄ±nda tekrar "aynÄ± indekse" random sayÄ± atamak iÃ§in for dÃ¶ngÃ¼sÃ¼ne dÃ¶nÃ¼lÃ¼r, random sayÄ± Ã¼retme sayÄ±sÄ± burada "count" ile sayÄ±lmÄ±ÅŸtÄ±r.
                i--;
                count++;
             }
-            else{//dizide aynı sayıya "rastlanmadığında" arrayR dizisine döngüde random üretilen sayı atanmış olur.
+            else{//dizide aynÄ± sayÄ±ya "rastlanmadÄ±ÄŸÄ±nda" arrayR dizisine dÃ¶ngÃ¼de random Ã¼retilen sayÄ± atanmÄ±ÅŸ olur.
                 arrayR[i] = num;
             }
         }
         
-        for (int k = 0; k < arrayR.length; k++){// Oluşturulan birbirinden farklı 9 rakamlı dizi yazdırılmıştır.
+        for (int k = 0; k < arrayR.length; k++){// OluÅŸturulan birbirinden farklÄ± 9 rakamlÄ± dizi yazdÄ±rÄ±lmÄ±ÅŸtÄ±r.
             System.out.print(arrayR[k] + ", ");
         }
-		System.out.print("Random fonksiyonu "+ count +" kere çalışmıştır.");// kaç kere random fonk. kullanıldığı yazılmıştır.
+		System.out.print("Random fonksiyonu "+ count +" kere Ã§alÄ±ÅŸmÄ±ÅŸtÄ±r.");// kaÃ§ kere random fonk. kullanÄ±ldÄ±ÄŸÄ± yazÄ±lmÄ±ÅŸtÄ±r.
 		
     }
 }
